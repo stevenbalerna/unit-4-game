@@ -64,11 +64,7 @@ var startGame = function(){
 
 $("#targetTotal").html(targetTotal);
 $("#currentTotal").html(currentTotal);
-    //test
-    console.log("blank")
-    console.log("Target Score: " + targetTotal)
-    console.log("Power Stone: " + stones.power.value + " | Reality Stone: " + stones.reality.value + " | Time Stone: " + stones.time.value + " | Soul Stone: " + stones.soul.value);
-    console.log("blank")
+   
 }
 
 
@@ -84,8 +80,7 @@ $("#currentTotal").html(currentTotal);
 
 checkWin();
 
-//test
-console.log("your score" + currentTotal);
+
 }
 
 //Possible Outcome Functions
@@ -93,14 +88,12 @@ console.log("your score" + currentTotal);
 var checkWin = function() {
     if (currentTotal > targetTotal){
         alert ("You lose, Thanos wins!");
-        console.log ("Thanos Wins");
         lostTotal ++;
         $("#losses").html(lostTotal);
         startGame();
     }
     else if (currentTotal === targetTotal) {
         alert ("You win, You stopped Thanos!");
-        console.log ("You win!")
         winTotal ++;
         $("#wins").html(winTotal);
         startGame();
